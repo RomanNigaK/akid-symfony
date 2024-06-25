@@ -1,0 +1,66 @@
+
+
+
+.data-act-field{
+    & > .about-data-field{
+        text-align: center;
+        font-size: 8pt;
+        border-top:1px solid black
+    }
+    & > .content{
+        font-size: 12pt;
+        font-style: italic;
+    }
+
+}
+
+.data-act-field-data{
+    display: flex;
+    &>.content-data{
+        margin-left: 20px;
+        &>div{
+            display: flex;
+            &>.title{
+                width: 200px;
+            }
+            &>.date{
+                width: 150px;
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+
+
+}
+
+.quantity-copyes-act{
+    display: flex;
+    &>.count{
+        width: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-bottom: 1px solid black;
+    }
+}
+
+.name-act{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &>.meta{
+        display: flex;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        &>.number{
+            display: flex;
+        }
+        &>.data{
+            display: flex;
+        }
+    }
+
+}
+

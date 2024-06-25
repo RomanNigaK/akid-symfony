@@ -1,0 +1,104 @@
+      <div style="display: flex">
+          <div style="width: 200px">
+          <b>Акт составлен в</b>
+          </div>
+          <div style="padding-left: 10px; padding-right: 10px; borderBottom: 1px solid black">
+            5 (пяти)
+          </div>
+          <div>
+          экземплярах
+          </div>
+      </div>
+
+      <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>Представитель застройщика (технического заказчика, эксплуатирующей организации или регионального оператора) по вопросам строительного контроля</b>
+          </div>
+          <div style="display:flex">
+            <div style="width: 100%"></div>
+          <div style="width: 150px">{{personDeveloperName}}</div>
+           
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          ( фамилия, инициалы, подпись)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>Представитель лица, осуществляющего строительство</b>
+          </div>
+          <div style="display:flex">
+            <div style="width:100%"></div>
+          <div style="width:150px"> {{personCarryingConstructionPeople}}</div>
+           
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          ( фамилия, инициалы, подпись)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>Представитель лица, осуществляющего строительство, по вопросам строительного контроля (специалист по организации строительства)</b>
+          </div>
+          <div style="display:flex">
+            <div style="width:100%"></div>
+          <div style="width:150px"> {{personCarryingConstruction_buildControl}}</div>
+           
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          ( фамилия, инициалы, подпись)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>Представитель лица, осуществляющего подготовку проектной документации</b>
+          </div>
+          <div style="display:flex">
+            <div style="width:100%"></div>
+          <div style="width:150px">{{personProjectDocumentation_representative}}</div>
+           
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          ( фамилия, инициалы, подпись)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>Представитель лица, выполнившего работы, подлежащие освидетельствованию</b>
+          </div>
+          <div style="display:flex">
+            <div style="width:100%"></div>
+          <div style="width:150px"> Третьяков Д.В.</div>
+           
+          </div>
+        </div>
+       <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          ( фамилия, инициалы, подпись)
+        </div>
+
+
+
+
+          {% if otherPeople %}
+            <div style="width: 100%">
+              <div>
+                <b>Представители иных лиц:</b>
+              </div>
+              {% for operation in otherPeople %}
+                  <div style=" display: flex; border-bottom:1px solid black">
+                    <div style="width:100%"></div>
+                  <div style="width:150px"> {{operation}}</div>
+                 
+         </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          ( фамилия, инициалы, подпись)
+        </div>
+        {% endfor %}
+				  {% endif %}
+
+

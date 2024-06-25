@@ -1,0 +1,252 @@
+      <main style=" margin-top:20px">
+        <div style="text-align: center">
+          <b>АКТ</b>
+        </div>
+        <div style=" text-align: center">
+          <b>освидетельствования скрытых работ</b>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <b>№ 1</b>
+          </div>
+          <div style="text-align: center">
+            <div>
+              <div  style="border-bottom: 2px solid black; padding-left: 50px; padding-right: 50px">
+                <b>{{dateEnd}}</b>
+              </div>
+             <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+                (дата составления акта)
+              </div>
+            </div>
+          </div>
+        </div>
+       <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>
+              Представитель застройщика (технического заказчика, эксплуатирующей
+              организации или регионального оператора) по вопросам строительного
+              контроля):
+            </b>
+          </div>
+          <div style = "min-height: 20px" >
+           {{developerPeople}}
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (должность, фамилия, инициалы идентификационный номер в национальном
+          реестре специалистов в области строительства, реквизиты
+          распорядительного документа, подтверждающего полномочия, с указанием
+          наименования, ОГРН, ИНН, места нахождения юридического лица, фамилии,
+          имени, отчества , адреса места жительства, ОРГНИП, ИНН индивидуального
+          предпринимателя)
+        </div>
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>Представитель лица, осуществляющего строительство:</b>
+          </div>
+          <div style = "min-height: 20px" >
+            {{personCarryingConstruction_representative_full}}
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (должность, фамилия, инициалы, реквизиты распорядительного документа,
+          подтверждающего полномочия)
+        </div>
+         <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>
+              Представитель лица, осуществляющего строительство, по вопросам
+              строительного контроля (специалист по организации строительства):
+            </b>
+          </div>
+          <div style = "min-height: 20px" >
+            {{personCarryingConstruction_buildControl_full}}
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (должность, фамилия, инициалы, идентификационный номер в национальном
+          реестре специалистов, в области строительства, реквизиты
+          распорядительного документа, подтверждающего полномочия)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>
+              Представитель лица, осуществляющего подготовку проектной
+              документации:
+            </b>
+          </div>
+          <div style = "min-height: 20px" >{{personProjectDocumentation_representative_full}}</div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (должность, фамилия, инициалы, реквизиты распорядительного документа,
+          подтверждающего полномочия, с указанием наименования, ОГРН, ИНН, места
+          нахождения юридического лица, фамилии, имени, отчества , адреса места
+          жительства, ОРГНИП, ИНН индивидуального предпринимателя, наименование,
+          ОГРН, ИНН саморегулируемой организации, членом которой является
+          указанное юридическое лицо, индивидуальный предприниматель)
+        </div>
+       <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>
+              Представитель лица, выполнившего работы, подлежащие
+              освидетельствованию:
+            </b>
+          </div>
+          <div style = "min-height: 20px" >
+            Мастер участка ООО "Символ" Бредихин С.Ю. приказ №06/01 от
+            01.06.2023г.
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (должность, фамилия, инициалы, реквизиты распорядительного документа,
+          подтверждающего полномочия, фамилии, имени, отчество , адреса места
+          жительства, ОРГНИП, ИНН индивидуального предпринимателя)
+        </div>
+
+          {% if otherPeopleFullData %}
+          <div style="width: 100%">
+                      <div>
+                        <b>
+                          а также иные представители лиц, участвующих в освидетельствовании:
+                        </b>
+                      </div>
+                      {% for operation in otherPeopleFullData %}
+                      <div style="min-height:20px ; border-bottom:  1px solid black ">
+                        {{operation}}
+                      </div>
+                      {% endfor %}
+                    </div>
+				  {% endif %}
+          
+
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic;" >
+          (должность с указанием наименования организации, фамилия, инициалы,
+          реквизиты распорядительного документа, подтверждающего полномочия)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>произвели осмотр работ, выполненных</b>
+          </div>
+          <div style = "min-height: 20px; text-align:center" >ООО «Символ»</div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (наименование лица, выполнившего работы, подлежащие
+          освидетельствованию)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>1.К освидетельствованию предъявлены следующие работы:</b>
+          </div>
+          <div style = "min-height: 20px" >
+           {{typeWorkName}}
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (наименование скрытых работ)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>2. Работы выполнены по проектной документации </b>
+          </div>
+          <div style = "min-height: 20px" >
+          {{projectDocument}}</div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (номер, другие реквизиты чертежа, наименование проектной и/или рабочей
+          документации, сведения о лицах, осуществляющих подготовку раздела
+          проектной и/или рабочей документации)
+        </div>
+
+        <div style="width: 100%">
+              <div>
+            <b>3. При выполнении работ применены:</b>
+          </div>
+          <div style=" border-bottom: 1px solid black">
+            Пленка пароизоляционная - Информационное письмо №742 от от
+            17.06.2020
+          </div>
+          <div style=" border-bottom: 1px solid black">
+            Фанера строительная
+          </div>
+        </div>
+
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (наименование строительных материалов (изделий), реквизиты
+          сертификатов и/или других документов, подтверждающих их качество и
+          безопасность)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>
+              4. Предъявлены документы, подтверждающие соответствие работ
+              предъявляемым к ним требованиям:
+            </b>
+          </div>
+          <div style = "min-height: 20px" >
+            Исполнительная схема №1 от 05.06.2023г
+          </div>
+        </div>
+       <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (исполнительные схемы и чертежи, результаты экспертиз, обследований,
+          лабораторных и иных испытаний выполненных работ, проведенных в
+          процессе строительного контроля)
+        </div>
+
+        <div style="width: 100%; display:flex">
+          <div style="width: 200px">
+            <b>5. Даты:</b>
+          </div>
+          <div>
+            <div style="display: flex">
+              <div style="width: 250px; text-align: right; margin-right: 10px">
+                начала работ
+              </div>
+              <div style=" width:  100px; border-bottom:  1px solid black ">
+               {{dateStart}}
+              </div>
+            </div>
+            <div style="display: flex">
+              <div
+                style="width: 250px; text-align: right; margin-right: 10px">
+                окоончания работ
+              </div>
+              <div style="width:  100px; border-bottom:  1px solid black ">
+               {{dateEnd}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>6. Работы выполнены в соответствии с</b>
+          </div>
+          <div style = "min-height: 20px" >
+            СП 71.13330.2017 "Изоляционные и отделочные покрытия"
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (наименования и структурные единицы технических регламентов, иных
+          нормативных правовых актов, разделы проектной и/или рабочей
+          документации)
+        </div>
+
+        <div style = "width: 100%; border-bottom: 1px solid black">
+          <div>
+            <b>7. Разрешается производство последующих работ по</b>
+          </div>
+          <div style = "min-height: 20px" >
+          {{next}}
+          </div>
+        </div>
+        <div style="font-size: 8pt; text-align: center; margin-bottom: 10px; font-style: italic" >
+          (наименование работ, конструкций, участков сетей
+          инженерно-технического обеспечения)
+        </div>
+
+

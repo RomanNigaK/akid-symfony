@@ -1,0 +1,61 @@
+h3 {
+    font-size: 14pt;
+    margin: 0;
+}
+
+
+/* шапка актов АТГ */
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &>div {
+        height: 100%;
+    }
+
+    &>:first-child {
+        width: 40%;
+    }
+
+    &>:last-child {
+        width: 50%;
+    }
+
+    &>.date {
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+
+        &>div {
+            min-height: 40px;
+            width: 50px;
+            border-bottom: 1px solid black;
+        }
+
+        &>.mounth {
+            width: 200px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.name {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.meta {
+    text-align: center;
+    border-top: 1px solid black;
+    width: 100%;
+    font-size: 8pt;
+}
+
+.header{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
