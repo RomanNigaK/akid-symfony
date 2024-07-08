@@ -29,6 +29,9 @@ class Kit
     #[ORM\OneToMany(mappedBy: 'kit', targetEntity: Material::class)]
     private Collection $materials;
 
+    #[ORM\OneToMany(mappedBy: 'kit', targetEntity: Person::class)]
+    private Collection $persons;
+
     public function __construct(
         CreateKitRequestModel $data
     ) {
@@ -36,6 +39,7 @@ class Kit
         $this->name = $data->getName();
         $this->works = new ArrayCollection();
         $this->materials = new ArrayCollection();
+        $this->persons = new ArrayCollection();
     }
 
     public function getId(): string
@@ -120,6 +124,36 @@ class Kit
             // set the owning side to null (unless already changed)
             if ($material->getKit() === $this) {
                 $material->setKit(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Developer>
+     */
+    public function getPersons(): Collection
+    {
+        return $this->persons;
+    }
+
+    public function addDeveloper(Person $person): static
+    {
+        if (!$this->persons->contains($person)) {
+            $this->persons->add($person);
+            $person->setKit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDeveloper(Person $person): static
+    {
+        if ($this->persons->removeElement($person)) {
+            // set the owning side to null (unless already changed)
+            if ($person->getKit() === $this) {
+                $person->setKit(null);
             }
         }
 

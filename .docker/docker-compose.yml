@@ -18,8 +18,7 @@ services:
     
     networks:
       - akid
-    
-  
+
   nginx:
     build:
       context: ./nginx
@@ -30,8 +29,8 @@ services:
     ports:
       - ${WEB_PORT}:80
     networks:
-      - akid  
-
+      - akid     
+  
   php-fpm:
     build:
       context: ./php-fpm
@@ -42,7 +41,9 @@ services:
       - mysql
     networks:
       - akid  
+      
 
+      
   php-cli:
     build:
       context: ./php-cli
